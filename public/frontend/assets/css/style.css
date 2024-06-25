@@ -425,3 +425,22 @@ body{
     cursor: pointer;
     transition: .4s ease;
 }
+
+.circle-container {
+    display: inline-block;
+    position: relative;
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    border-radius: 50%;
+    border: 2px solid blue; /* Color of the circle's circumference */
+    text-align: center;
+    line-height: 40px; /* Should match height for centering */
+}
+
+.icon {
+    font-size: 24px; /* Adjust icon size */
+    color: blue; /* Color of the icon */
+    position: relative;
+    top: 1px; /* Adjust icon positioning if necessary */
+}
+

@@ -7,7 +7,9 @@
                 <div class="col-lg-4 mt-4">
                     <div class="card servicesText">
                         <div class="card-body">
-                            <i class="{{$service->icon}}"></i>
+                            <div class="circle-container">
+                                <i class="icon {{$service->icon}}"></i>
+                            </div>
                             <h4 class="card-title mt-3">{{ $service->title }}</h4>
                             <p class="card-text mt-3">{{ $service->description }}
                             </p>

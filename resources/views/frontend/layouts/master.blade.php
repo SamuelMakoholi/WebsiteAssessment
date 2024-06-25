@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="{{asset('frontend/front/css/bootstrap.min.css')}}">
 
     <link rel="stylesheet" href="{{asset('frontend/front/js/bootstrap.min.js')}}">
+
+    <script src="https://kit.fontawesome.com/ea6f44d172.js" crossorigin="anonymous"></script>
   
     <!-- JavaScript and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
