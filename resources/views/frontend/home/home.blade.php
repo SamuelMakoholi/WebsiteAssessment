@@ -8,15 +8,12 @@
 
 @include('frontend.home.sections.services')
 
-{{-- @include('frontend.home.sections.pricing') --}}
+@include('frontend.home.sections.pricing')
 
-
-    
-{{-- 
 
 @include('frontend.home.sections.bottom')
 
- --}}
+
 
 
 

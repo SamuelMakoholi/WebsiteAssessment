@@ -1,8 +1,8 @@
 <!--section three-->
 <section id="section5">
     <div class="main_text">
-        <h1>{{ $sectionThree->title ?? '' }}</h1>
-        <p>{{ $sectionThree->main_text ?? '' }}</p>
+        <h1>{{ $bottomSection->title ?? '' }}</h1>
+        <p>{{ $bottomSection->description ?? '' }}</p>
         <button type="button" class="section5-btn">Get Started</button>
     </div>
 

@@ -1,45 +1,32 @@
   <!--section for pricing-->
+
   <section id="pricing">
-      <h2 id="pri">Pricing</h2>
+      <div style="text-align: center;">
+          <h2 class="div-pricing-title">Pricing</h2>
+      </div>
+
+
       <div class="price-row">
-          <div class="price-col">
-              <p>Starter</p>
-              <h5>{{ $starter->title ?? '' }}</h5>
-              <h3><sup style="font-size: 20px">$</sup>{{ $starter->amount ?? '' }}<span>/month</span></h3>
-              <button> Start Free Trial</button>
-              <ul>
-                  <li>Crust justo audio</li>
-                  <li> Dapibus ac facilisi in</li>
-                  <li>Mobi leo resus</li>
-                  <li>Exceptuer sint accaecat</li>
-              </ul>
+          @if ($pricings->count() > 0)
+              @foreach ($pricings as $item)
+                  <div class="price-col">
+                      <p>{{ $item->name ?? '' }}</p>
+                      {{ $item->description }}
+                      <h3><sup style="font-size: 20px">$</sup>{{ $item->amount ?? '' }}<span>/month</span></h3>
+                      <button
+                          style="background-color: @if ($item->name === 'Exclusive') blue; color: white; @else inherit; @endif;">{{ $item->trial_button_text ?? '' }}</button>
+                      <ul class="custom-list">
+                          @foreach ($item->pricingFeature as $feature)
+                              <li><i class="fa-regular fa-circle-check"></i> {{ $feature->feature_text }}</li>
+                          @endforeach
+                      </ul>
+                  </div>
+              @endforeach
+          @else
 
-          </div>
+          <p>No Pricings</p>
+          @endif
 
-          <div class="price-col">
-              <p id="exclusivetext">Exclusive</p>
-              <h5>{{ $exclusive->title ?? '' }}!</h5>
-              <h3><sup style="font-size: 20px">$</sup>{{ $exclusive->amount ?? '' }}<span>/month</span></h3>
-              <button id="exclusive"> Start Free Trial</button>
-              <ul>
-                  <li>Crust justo audio</li>
-                  <li> Dapibus ac facilisi in</li>
-                  <li>Mobi leo resus</li>
-                  <li>Exceptuer sint accaecat</li>
-              </ul>
-          </div>
 
-          <div class="price-col">
-              <p>Premium</p>
-              <h5>{{ $premium->title ?? '' }}!</h5>
-              <h3><sup style="font-size: 20px">$</sup>{{ $premium->amount ?? '' }}<span>/month</span></h3>
-              <button> Start Free Trial</button>
-              <ul>
-                  <li>Crust justo audio</li>
-                  <li>Dapibus ac facilisi in</li>
-                  <li>Mobi leo resus</li>
-                  <li>Exceptuer sint accaecat</li>
-              </ul>
-          </div>
       </div>
   </section>
