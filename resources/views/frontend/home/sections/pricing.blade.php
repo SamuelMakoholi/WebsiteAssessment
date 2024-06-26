@@ -10,7 +10,10 @@
           @if ($pricings->count() > 0)
               @foreach ($pricings as $item)
                   <div class="price-col">
-                      <p>{{ $item->name ?? '' }}</p>
+                      {{-- <p>{{ $item->name ?? '' }}</p> --}}
+                      <div style="text-align: center;">
+                          <h2 class="div-pricing-title">{{ $item->name ?? '' }}</h2>
+                      </div>
                       {{ $item->description }}
                       <h3><sup style="font-size: 20px">$</sup>{{ $item->amount ?? '' }}<span>/month</span></h3>
                       <button
@@ -23,8 +26,7 @@
                   </div>
               @endforeach
           @else
-
-          <p>No Pricings</p>
+              <p>No Pricings</p>
           @endif
 
 

@@ -3,7 +3,8 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <img src="{{ isset($latestOurAboutUs) && $latestOurAboutUs->thumb_image ? asset($latestHeroSection->thumb_image) : asset('frontend/assets/img/placeholder.png') }}" class="img-fluid" alt="Software Development">
+                <img src="{{ isset($latestOurAboutUs) && $latestOurAboutUs->thumb_image ? asset($latestHeroSection->thumb_image) : asset('frontend/assets/img/placeholder.png') }}"
+                    class="img-fluid" alt="Software Development">
 
                 {{-- <img src="{{ asset($latestOurAboutUs->thumb_image ?? 'Image') }}" class="img-fluid" alt="Software Development"> --}}
             </div>
@@ -12,7 +13,7 @@
                 {{-- <h5>OUR STORY</h5> --}}
                 <h5>{{ $latestOurAboutUs->subtitle ?? 'Subtitle Text' }}</h5>
                 <h3>{{ $latestOurAboutUs->title ?? 'Second Text' }}</h3>
-              
+
 
                 <div class="about">
                     <ul id="accordion">
