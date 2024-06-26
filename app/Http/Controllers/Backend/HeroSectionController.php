@@ -117,6 +117,7 @@ class HeroSectionController extends Controller
         $heroSection->delete();
         //toastr('Hero-Section Deleted Successfuully!!', 'success', );
 
-        return response(['status'=>'success', 'message'=>'Deleted Successfully!!']);
+        return redirect()->route('hero-section.index')->with('success', 'Deleted Successfully!!');
+
     }
 }
